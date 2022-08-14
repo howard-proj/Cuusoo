@@ -1,8 +1,8 @@
-,id,top_three,average
-0,perth,"['cloudy', 'light rain shower', 'rain shower']","{'C': 12.354166666666666, 'F': 54.25}"
-1,darwin,"['partly sunny', 'clear', 'cloudy']","{'C': 25.808333333333334, 'F': 78.5}"
-2,canberra,"['mostly cloudy', 'thunderstorm', 'cloudy']","{'C': 13.9375, 'F': 57.083333333333336}"
-3,hobart,"['cloudy', 'mostly clear', 'mostly sunny']","{'C': 11.695833333333333, 'F': 53.083333333333336}"
-4,melbourne,['mostly cloudy'],"{'C': 15.1875, 'F': 59.333333333333336}"
-5,brisbane,"['partly sunny', 'foggy', 'ground fog']","{'C': 16.962500000000002, 'F': 62.5}"
-6,sydney,"['clear', 'cloudy', 'sunny']","{'C': 19.666666666666668, 'F': 67.41666666666667}"
+,id,top_three,average_celcius,average_fahrenheit
+0,perth,"['cloudy', 'light rain shower', 'rain shower']",12.354166666666664,54.25
+1,darwin,"['partly sunny', 'clear', 'cloudy']",25.808333333333334,78.5
+2,canberra,"['mostly cloudy', 'thunderstorm', 'cloudy']",13.9375,57.083333333333336
+3,hobart,"['cloudy', 'mostly clear', 'mostly sunny']",11.695833333333333,53.083333333333336
+4,melbourne,['mostly cloudy'],15.187500000000002,59.333333333333336
+5,brisbane,"['partly sunny', 'foggy', 'ground fog']",16.9625,62.5
+6,sydney,"['clear', 'cloudy', 'sunny']",19.666666666666664,67.41666666666667

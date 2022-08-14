@@ -1,6 +1,7 @@
 import json
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # EACH JSON file has 24 entries or hours, and each file is for different city
 def load_data(path):
@@ -50,18 +51,23 @@ def find_topthree_results(weather_data):
 def find_average_temperature(weather_data):
     # It's a list of 2 dictionaries for C and F
     temp_data = weather_data['temperature']
-    average_temp = {}
+    average_temp_C = {}
+    average_temp_F = {}
 
-    holder_celcius = []
-    holder_fahrenheit = []
+    holder_celcius = 0.0
+    holder_fahrenheit = 0.0
     for temp in temp_data:
-        holder_celcius.append(float(temp[0]['Value']))
-        holder_fahrenheit.append(float(temp[1]['Value']))
+        if temp[0]['Value'] is not None:
+            holder_celcius += (float(temp[0]['Value']))
         
-    average_temp['C'] = np.mean(holder_celcius)
-    average_temp['F'] = np.mean(holder_fahrenheit)
+        if temp[1]['Value'] is not None:
+            holder_fahrenheit += (float(temp[1]['Value']))
 
-    return average_temp
+
+    average_temp_C['C'] = np.divide(holder_celcius, float(len(temp_data)))
+    average_temp_F['F'] = np.divide(holder_fahrenheit, float(len(temp_data)))
+
+    return average_temp_C['C'], average_temp_F['F']
 
 def save_data(end_results):
     df = pd.DataFrame(end_results)
@@ -77,12 +83,13 @@ def main():
 
         id = weather_data['id']
         three_results = find_topthree_results(weather_data)
-        average_temperature = find_average_temperature(weather_data)
+        average_c, average_f = find_average_temperature(weather_data)
 
         output = {}
         output['id'] = id
         output['top_three'] = three_results
-        output['average'] = average_temperature
+        output['average_celcius'] = average_c
+        output['average_fahrenheit'] = average_f
 
         end_results.append(output)
 
