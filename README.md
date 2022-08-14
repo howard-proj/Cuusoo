@@ -1,6 +1,6 @@
 # Cuusoo Coding
 
-This task explores the typical weather and average temperature of 7 different cities in Australia on a 1 hour interval within 24 hour period.
+This task explores the typical weather and average temperature of 7 different cities in Australia on a 1 hour interval within a 24 hour period at 2022-08-04.
 
 List of tool(s) and language(s)
 
